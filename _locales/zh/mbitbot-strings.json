@@ -34,7 +34,7 @@
     "mbitbot.CH.CH2|block": "關閉",
     "mbitbot.ESP8266_Sleep|block": "ESP8266連接 %epin|設定睡眠模式 %ch",
     "mbitbot.IC_ThingSpeak|block": "上傳ThingSpeak API Keys %apikey|Field1 %f1|Field2 %f2|Field3 %f3|Field4 %f4|Field5 %f5|Field6 %f6|Field7 %f7|Field8 %f8",
-    "mbitbot.WLJHS_HttpGet|block": "呼叫URL 位址 網址 %addr|路徑 %path|參數1 %f1||參數2 %f2 參數3 %f3 參數4 %f4 參數5 %f5 參數6 %f6 參數7 %f7 參數8 %f8"",
+    "mbitbot.WLJHS_HttpGet|block": "呼叫URL 位址 網址 %addr|路徑 %path|參數1 %f1||參數2 %f2 參數3 %f3 參數4 %f4 參數5 %f5 參數6 %f6 參數7 %f7 參數8 %f8",
     "mbitbot.PMS3003_SET|block": "PMS3003連接 %apin|設定低功耗模式 %ch",
     "mbitbot.TIC_PMS3003|block": "讀取PMS3003連接 %apin",
     "mbitbot.RIC_PMS3003|block": "取得PMS3003感測值 %pms",
