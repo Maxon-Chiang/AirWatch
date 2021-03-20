@@ -269,7 +269,7 @@ namespace mbitbot {
     	basic.pause(4000)
     }
 	
-  //% blockId=Mbitbot_ESP8266 block="WiFi AP SSID %ssid"
+  //% blockId=Mbitbot_ESP8266 block="WiFi AP_SSID %ssid"
   //% weight=10
   export function WiFi_AP_Connected(ssid: string): boolean {
 	let 回應字串 = ""	
