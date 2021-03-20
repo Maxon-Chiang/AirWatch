@@ -250,7 +250,7 @@ namespace mbitbot {
 
   //% blockId=Mbitbot_ESP8266 block="ESP8266 pin %epin|Wifi SSID %ssid|KEY %key"
   //% weight=10
-  export function IC_ESP8266(epin: ESPpin = 1, ssid: string, key: string): void {
+  export function IC_ESP8266(epin: ESPpin = 1, ssid: string, key: string): boolean {
 	if(epin == 1) {
 		serial.redirect(SerialPin.P13,SerialPin.P14,BaudRate.BaudRate115200)
 	}
@@ -266,7 +266,17 @@ namespace mbitbot {
     	basic.pause(1000)
     	let printT = "AT+CWJAP_CUR=\"" + ssid + "\",\"" + key + "\""
     	serial.writeString(printT + "\u000D" + "\u000A")
-    	basic.pause(4000)
+    	basic.pause(5000)
+	let resp = ""	
+	let stime = input.runningTime()
+	serial.writeString("AT+CWJAP_CUR?\u000D\u000A")
+	while ((input.runningTime() - stime) < 3000) {
+	resp = resp + serial.readString()
+		if (resp.includes(ssid)) {
+			return true
+		}
+	}
+	return false	  
     }
     export enum CH {
         //% block="ON"
