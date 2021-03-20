@@ -248,7 +248,7 @@ namespace mbitbot {
         Ep6 = 3
     }
 
-  //% blockId=Mbitbot_ESP8266 block="ESP8266 pin %epin|Wifi SSID %ssid|KEY %key"
+  //% blockId=Mbitbot_ESP8266 block="ESP8266 pin %epin|SSID %ssid|KEY %key"
   //% weight=10
   export function IC_ESP8266(epin: ESPpin = 1, ssid: string, key: string): void {
 	if(epin == 1) {
@@ -269,7 +269,7 @@ namespace mbitbot {
     	basic.pause(4000)
     }
 	
-  //% blockId=Mbitbot_ESP8266 block="WiFi AP_SSID %ssid"
+  //% blockId=Mbitbot_ESP8266 block="ESP8266 AP_SSID %ssid"
   //% weight=10
   export function WiFi_AP_Connected(ssid: string): boolean {
 	let 回應字串 = ""	
